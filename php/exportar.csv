@@ -1,0 +1,12 @@
+usuario;1;Francisco;Fernandez Suarez
+usuario;2;Lucia;Rodriguez Garcia
+usuario;3;Fernando;Fernandez Alvarez
+lugar;1;Oviedo
+lugar;2;Gijon
+lugar;3;Hawai
+resena;1;1;1;Me ha parecido muy bien;9
+resena;2;1;2;Me ha parecido normal;5
+resena;3;1;3;Me ha parecido genial;10
+resena;4;2;3;Me ha parecido genial;9
+resena;5;2;2;Me ha parecido normal;5
+resena;6;3;1;Me ha parecido muy bien;8

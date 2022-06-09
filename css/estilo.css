@@ -1,0 +1,142 @@
+/* a=0 b=0 c=0 -> Especificidad = 000 */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+/* a=0 b=0 c=1 -> Especificidad = 001 */
+body {
+    font: 600 15px Tahoma, sans-serif; /*Familia sans-serif*/
+    background-repeat: no-repeat;
+    background-color: royalblue;
+    color: white;
+    font-family: sans-serif;
+}
+
+/* a=0 b=0 c=1 -> Especificidad = 001 */
+h1 {
+    color: #fff;
+    text-transform: uppercase;
+    padding: 10px 25px;
+    text-align: center;     
+    font-weight: bold;
+    font-stretch: expanded;
+    font-size: 3em;
+}
+
+/* a=0 b=0 c=1 -> Especificidad = 001 */
+h2 {
+    color: whitesmoke;
+    text-transform: uppercase;
+    padding: 5px 25px;
+    text-align: center; 
+    font-weight: bold; 
+    font-style: italic;  
+    font-size: 2em; 
+}
+
+/* a=0 b=0 c=1 -> Especificidad = 001 */
+p {
+    font-family: Georgia, serif;
+    line-height: 1.8;
+    color: white;
+    text-align: justify;
+    margin-left: 2%;
+    margin-right: 10%;
+}
+
+/*especificidad -> 1*/
+nav {
+    display: flex;
+}
+
+/*especificidad -> 2*/
+nav a {
+    text-decoration: none;
+    display: block;
+    padding: 0.93em 1.56em;
+    text-align: center;
+    background-color: green;
+    color: white;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+/*especificidad -> 12*/
+nav a:hover {
+    background-color: rosybrown;
+    color: white;
+}
+
+/* a=0 b=1 c=0 -> Especificidad = 010 */
+.lugares {
+    color: white;
+    text-transform: uppercase;
+    padding: 5px 25px;
+    text-align: center; 
+    font-weight: bold; 
+    font-style: italic;  
+    font-size: 2em;  
+}
+
+/* a=0 b=0 c=1 -> Especificidad = 001 */
+li {
+    color: white;
+    text-align: center;  
+}
+
+/* a=0 b=0 c=1 -> Especificidad = 001 */
+table {
+    width: 60%;
+    margin: 0 auto;
+}
+
+/* a=0 b=0 c=1 -> Especificidad = 001 */
+table, th, td{
+    border: 1px solid black;
+    text-align: center;
+}
+
+/* a=0 b=0 c=1 -> Especificidad = 001 */
+th{
+    font-family: Georgia, serif;
+    line-height: 1.8;
+    color: white;
+    background-color: brown;
+}
+
+/* a=0 b=0 c=1 -> Especificidad = 001 */
+video {
+    display:block; 
+    width: 30%; height: 30%;
+}
+
+/* a=0 b=1 c=0 -> Especificidad = 010 */
+.link {
+    color: white;
+}
+
+/* a=0 b=0 c=1 -> Especificidad = 001 */
+footer {
+    position: initial;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+/* a=0 b=0 c=2 -> Especificidad = 002 */
+a img {
+    margin-top: 2%;
+    margin-left: 1% ;
+}
+
+/* a=0 b=0 c=1 -> Especificidad = 001 */
+div {
+    color: black;
+}
+
+/* a=1 b=0 c=0 -> Especificidad = 100 */
+#mapa{
+    height:450px; 
+    width:100%;
+}

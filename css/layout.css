@@ -1,0 +1,26 @@
+/* a=0 b=0 c=1 -> Especificidad = 001 */
+body {
+    display: grid;
+    grid-template-areas:
+            "head"
+            "section"
+            "footer"
+}
+
+/* a=0 b=0 c=1 -> Especificidad = 001 */
+head {
+    grid-area: head;
+}
+
+/* a=0 b=0 c=1 -> Especificidad = 001 */
+section {
+    grid-area: section;
+    margin: 8px;
+    text-align: justify;
+    align-items: flex-start;
+}
+
+/* a=0 b=0 c=1 -> Especificidad = 001 */
+footer {
+    grid-area: footer;
+}

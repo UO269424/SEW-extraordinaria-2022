@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reseñas xmlns="http://www.uniovi.es" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.uniovi.es resenas.xsd">
+    <reseña nombre="Viaje a Almería">
+        <nombre_apellido>Alonso Gago</nombre_apellido>
+        <correo>alonsogago@uniovi.es</correo>
+        <lugar_reseña>Almería</lugar_reseña>
+        <procedencia>España</procedencia>
+        <texto>
+            Hay que tener puntería para pillar 2 de los 10 días al año que llueve
+        </texto>
+        <lugares>
+            <lugar nombre="Paseo marítimo Carmen de Burgos">
+                <texto_lugar>
+                    Muy bonito
+                </texto_lugar>
+                <puntuacion_lugar>9</puntuacion_lugar>
+                <foto>paseo.jpg</foto>
+            </lugar>
+            <lugar nombre="Noria de Almería">
+                <texto_lugar>
+                    En el centro con vistas a la playa
+                </texto_lugar>
+                <puntuacion_lugar>10</puntuacion_lugar>
+                <foto>noria.jpg</foto>
+            </lugar>
+        </lugares>
+    </reseña>
+    <reseña nombre="Viaje a Budapest">
+        <nombre_apellido>Marina Vega</nombre_apellido>
+        <correo>marinavega@uniovi.es</correo>
+        <lugar_reseña>Budapest</lugar_reseña>
+        <procedencia>España</procedencia>
+        <texto>
+            Ciudad increíble
+        </texto>
+        <lugares>
+            <lugar nombre="Castillo de Buda">
+                <texto_lugar>
+                    Excelentes vistas, recomiendo venir a visitarlo.
+                </texto_lugar>
+                <puntuacion_lugar>10</puntuacion_lugar>
+                <foto>castillo.jpg</foto>
+            </lugar>
+            <lugar nombre="Danubio">
+                <texto_lugar>
+                    El Danubio azul
+                </texto_lugar>
+                <puntuacion_lugar>9</puntuacion_lugar>
+                <foto>danubio.jpg</foto>
+            </lugar>
+        </lugares>
+    </reseña>
+</reseñas>
