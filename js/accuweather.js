@@ -75,7 +75,7 @@ class Meteo{
                 var pos = {lat: position.coords.latitude, lng: position.coords.longitude};
                 latitud = position.coords.latitude;
                 longitud = position.coords.longitude;
-                  var mapaGeoposicionado = new google.maps.Map(document.getElementById("mapa")[0],{
+                  var mapaGeoposicionado = new google.maps.Map($('main')[0],{
                     zoom: 8,
                     center:pos,
                     mapTypeId: google.maps.MapTypeId.ROADMAP
