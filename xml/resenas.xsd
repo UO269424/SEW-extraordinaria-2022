@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://www.uniovi.es" elementFormDefault="qualified" targetNamespace="http://www.uniovi.es" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="reseñas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="unbounded" ref="reseña" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="reseña">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="nombre_apellido" />
+        <xs:element ref="correo" />
+        <xs:element ref="lugar_reseña" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="procedencia" />
+        <xs:element ref="texto" />
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="lugares" />
+      </xs:sequence>
+      <xs:attribute name="nombre" type="xs:string" use="required" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nombre_apellido" type="xs:string" />
+  <xs:element name="correo" type="xs:string" />
+  <xs:element name="lugar_reseña" type="xs:string" />
+  <xs:element name="procedencia" type="xs:string" />
+  <xs:element name="texto" type="xs:string" />
+  <xs:element name="lugares">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="unbounded" ref="lugar" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="lugar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="texto_lugar" />
+        <xs:element ref="puntuacion_lugar" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="foto" />
+      </xs:sequence>
+      <xs:attribute name="nombre" type="xs:string" use="required" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="texto_lugar" type="xs:string" />
+  <xs:element name="puntuacion_lugar" type="xs:string" />
+  <xs:element name="foto" type="xs:string" />
+</xs:schema>

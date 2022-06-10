@@ -131,12 +131,12 @@ a img {
 }
 
 /* a=0 b=0 c=1 -> Especificidad = 001 */
-div {
+main {
     color: black;
 }
 
 /* a=1 b=0 c=0 -> Especificidad = 100 */
 #mapa{
-    height:450px; 
+    height:80%; 
     width:100%;
 }

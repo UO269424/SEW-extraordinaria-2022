@@ -1,5 +1,5 @@
 <!ELEMENT reseñas (reseña+)>
-<!ELEMENT reseña (nombre_apellido, correo, lugar_reseña, procedencia?, texto, lugares?)>
+<!ELEMENT reseña (nombre_apellido, correo, lugar_reseña, procedencia?, texto, lugares*)>
     <!ATTLIST reseña nombre CDATA #REQUIRED>
     <!ELEMENT nombre_apellido (#PCDATA)>
     <!ELEMENT correo (#PCDATA)>

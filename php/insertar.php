@@ -7,23 +7,19 @@ echo"<!DOCTYPE html>
     <title>Insertar</title>
     <link rel='stylesheet' href='../css/estilo.css'>
     <meta name = 'application_name' content = 'World Review'>
-    <meta name = 'author' content = 'Francisco Fernandez-UO269509'>
+    <meta name = 'author' content = 'Alonso Gago Suárez - UO269424'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
 </head>
 <body>
-    <header>
     <nav class='navbar'>
-        <ul class='nav-ul'>
-            <li class='navlink'><a href='../index.html' class='navbar-enlace'>Inicio</a></li>
-            <li class='navlink'><a href='../html/resenas.html' class='navbar-enlace'>Ver Reseñas</a></li>
-            <li class='navlink'><a href='../html/mapa.html' class='navbar-enlace'>Mapa</a></li>
-            <li class='navlink'><a href='../html/lugares.html' class='navbar-enlace'>Lugares</a></li>
-            <li class='navlink'><a href='../html/companias.html' class='navbar-enlace'>Compañías</a></li>
-            <li class='navlink'><a href='insertar.php' class='navbar-enlace'>Añadir Reseñas</a></li>
-            <li class='navlink'><a href='informe.php' class='navbar-enlace'>Informe</a></li>
-        </ul>
+            <a href='../index.html'>Inicio</a>
+            <a href='../html/resenas.html'>Ver Reseñas</a>
+            <a href='../html/mapa.html'>Mapa</a>
+            <a href='../html/lugares.html'>Lugares</a>
+            <a href='../html/companias.html'>Compañías</a>
+            <a href='./php/insertar.php' >Añadir Reseñas</a>
+            <a href='./php/informe.php' >Informe</a>
     </nav>
-    </header>
     <section class='home'>
         <h1>Insertar datos en la Base de Datos</h1>
         <form action='#' method='post' name='db.php'>
