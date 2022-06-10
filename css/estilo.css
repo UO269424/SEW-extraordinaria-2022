@@ -137,6 +137,6 @@ main {
 
 /* a=1 b=0 c=0 -> Especificidad = 100 */
 #mapa{
-    height:80%; 
+    height:300%; 
     width:100%;
 }
