@@ -7,6 +7,7 @@ echo"<!DOCTYPE html>
     <link rel='stylesheet' href='../css/estilo.css'>
     <meta name = 'application_name' content = 'World Review'>
     <meta name = 'author' content = 'Alonso Gago Suárez - UO269424'>
+    <meta name='address' content='UO269424@uniovi.es'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
 </head>
 <body>
