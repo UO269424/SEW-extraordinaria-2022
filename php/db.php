@@ -320,9 +320,9 @@
                     $result = $db->query("SELECT nombre_lugar FROM lugar WHERE id_lugar = ". $aux);
                     $lugarMejorVotado = $result->fetch_array()[0];
 
-                    $informe = "<p><label for='lugarVisitado'>Lugar más visitado: <input type='text' name='lugarVisitado' value='". $lugarMasVisitado ."' readonly/></label></p>".
-                            "<p><label for='persona'>Usuario más activo: <input type='text' name='persona' value='". $usuarioMasViajero ."' readonly/></label></p>" . 
-                            "<p><label for='lugarVotado'>Lugar mejor valorado: <input type='text' name='lugarVotado' value='". $lugarMejorVotado . "' readonly/></label></p>";
+                    $informe = "<p><label for='lugarVisitado'>Lugar más visitado: <input type='text' name='lugarVisitado' id='lugarVisitado' value='". $lugarMasVisitado ."' readonly/></label></p>".
+                            "<p><label for='persona'>Usuario más activo: <input type='text' name='persona' id='persona' value='". $usuarioMasViajero ."' readonly/></label></p>" . 
+                            "<p><label for='lugarVotado'>Lugar mejor valorado: <input type='text' name='lugarVotado' id='lugarVotado' value='". $lugarMejorVotado . "' readonly/></label></p>";
                     $this->closeBD($db);
                     return $informe;
                 }
