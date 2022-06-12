@@ -292,33 +292,46 @@
                 public function generarInforme(){
                     $db = new mysqli($this->servername,$this->username,$this->password,$this->database);
                     $this->checkCon($db);
-                    $result = $db->query("SELECT COUNT(*) FROM usuario");
-                    $personas = $result->fetch_array()[0];
-                    $result = $db->query("SELECT COUNT(*) FROM lugar");
-                    $lugares = $result->fetch_array()[0];
-                    $result = $db->query("SELECT COUNT(*) FROM resena");
-                    $resenas = $result->fetch_array()[0];
-                    $result = $db->query("SELECT COUNT(*) FROM viaje");
-                    $viajes = $result->fetch_array()[0];
+                    $result = $db->prepare("SELECT COUNT(id_usuario) FROM usuario");
+                    $result->execute();
+                    $personas = $result->get_result()->fetch_assoc();
+                    $result = $db->prepare("SELECT COUNT(*) FROM lugar");
+                    $result->execute();
+                    $lugares = $result->get_result()->fetch_assoc();
+                    $result = $db->prepare("SELECT COUNT(*) FROM resena");
+                    $result->execute();
+                    $resenas = $result->get_result()->fetch_assoc();
+                    $result = $db->prepare("SELECT COUNT(*) FROM viaje");
+                    $result->execute();
+                    $viajes = $result->get_result()->fetch_assoc();
                     if($personas == 0 || $lugares == 0 || $resenas == 0 || $viajes == 0){
                         $this->closeBD($db);
                         return "<p>No se puede generar un informe sin datos en la Base de Datos. Por favor, introduzca alguna reseña.</p>";
                     }
 
-                    $result = $db->query("SELECT id_lugar, COUNT(*) AS counter FROM resena GROUP BY id_lugar ORDER BY counter DESC");
-                    $aux = $result->fetch_array()[0];
-                    $result = $db->query("SELECT nombre_lugar FROM lugar WHERE id_lugar = ". $aux);
-                    $lugarMasVisitado = $result->fetch_array()[0];
+                    $result = $db->prepare("SELECT id_lugar, COUNT(*) AS counter FROM resena GROUP BY id_lugar ORDER BY counter DESC");
+                    $result->execute();
+                    $aux = $result->get_result()->fetch_assoc()['id_lugar'];
+                    $result = $db->prepare("SELECT nombre_lugar FROM lugar WHERE id_lugar = ?");
+                    $result->bind_param('i', $aux);
+                    $result->execute();
+                    $lugarMasVisitado = $result->get_result()->fetch_assoc()['nombre_lugar'];
 
-                    $result = $db->query("SELECT id_usuario, COUNT(*) AS counter FROM resena GROUP BY id_usuario ORDER BY counter DESC");
-                    $aux = $result->fetch_array()[0];
-                    $result = $db->query("SELECT nombre_usuario FROM usuario WHERE id_usuario = ". $aux);
-                    $usuarioMasViajero = $result->fetch_array()[0];
+                    $result = $db->prepare("SELECT id_usuario, COUNT(*) AS counter FROM resena GROUP BY id_usuario ORDER BY counter DESC");
+                    $result->execute();
+                    $aux = $result->get_result()->fetch_assoc()['id_usuario'];
+                    $result = $db->prepare("SELECT nombre_usuario FROM usuario WHERE id_usuario = ?");
+                    $result->bind_param('i', $aux);
+                    $result->execute();
+                    $usuarioMasViajero = $result->get_result()->fetch_assoc()['nombre_usuario'];
 
-                    $result = $db->query("SELECT id_lugar, AVG(puntuacion) AS counter FROM resena GROUP BY id_lugar ORDER BY counter DESC");
-                    $aux = $result->fetch_array()[0];
-                    $result = $db->query("SELECT nombre_lugar FROM lugar WHERE id_lugar = ". $aux);
-                    $lugarMejorVotado = $result->fetch_array()[0];
+                    $result = $db->prepare("SELECT id_lugar, AVG(puntuacion) AS counter FROM resena GROUP BY id_lugar ORDER BY counter DESC");
+                    $result->execute();
+                    $aux = $result->get_result()->fetch_assoc()['id_lugar'];
+                    $result = $db->prepare("SELECT nombre_lugar FROM lugar WHERE id_lugar = ?");
+                    $result->bind_param('i', $aux);
+                    $result->execute();
+                    $lugarMejorVotado = $result->get_result()->fetch_assoc()['nombre_lugar'];
 
                     $informe = "<p><label for='lugarVisitado'>Lugar más visitado: <input type='text' name='lugarVisitado' id='lugarVisitado' value='". $lugarMasVisitado ."' readonly/></label></p>".
                             "<p><label for='persona'>Usuario más activo: <input type='text' name='persona' id='persona' value='". $usuarioMasViajero ."' readonly/></label></p>" . 

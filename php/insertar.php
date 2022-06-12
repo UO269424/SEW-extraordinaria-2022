@@ -3,7 +3,6 @@ include 'db.php';
 echo"<!DOCTYPE html>
 <html lang='es'>
 <head>
-    <meta charset='utf-8'>
     <title>Insertar</title>
     <link rel='stylesheet' href='../css/estilo.css'>
     <meta name = 'application_name' content = 'World Review'>
@@ -12,13 +11,13 @@ echo"<!DOCTYPE html>
 </head>
 <body>
     <nav class='navbar'>
-            <a href='../index.html'>Inicio</a>
-            <a href='../html/resenas.html'>Ver Reseñas</a>
-            <a href='../html/mapa.html'>Mapa</a>
-            <a href='../html/lugares.html'>Lugares</a>
-            <a href='../html/companias.html'>Compañías</a>
-            <a href='insertar.php' >Añadir Reseñas</a>
-            <a href='informe.php' >Informe</a>
+            <a href='../index.html'> Inicio </a>
+            <a href='../html/resenas.html'> Ver Reseñas </a>
+            <a href='../html/mapa.html'> Mapa </a>
+            <a href='../html/lugares.html'> Lugares </a>
+            <a href='../html/companias.html'> Compañías </a>
+            <a href='insertar.php' > Añadir Reseñas </a>
+            <a href='informe.php' > Informe </a>
     </nav>
     <section class='home'>
         <h1>Insertar datos en la Base de Datos</h1>
@@ -36,13 +35,13 @@ echo"<!DOCTYPE html>
                                                 <option value='ebooker'>EBooker</option>
                                                 <option value='otra'>Otra</option>
                                             </select></p>
-            <p><label for='insertarDatos'><input type='submit' class='button' name='insertarDatos' value='Enviar datos' id='insertarDatos'/></label></p>
+            <p><label for='insertarDatos'>Enviar datos: <input type='submit' class='button' name='insertarDatos' value='Enviar datos' id='insertarDatos'/></label></p>
         </form>
     </section>	
     <footer>
         <a href='https://validator.w3.org/check?uri=referer'>
             <img src='../multimedia/HTML5.png' alt='HTML5 válido!' height='31' width='32'/></a>
-        <a href='http://jigsaw.w3.org/css-validator/check/referer'>
+        <a href='https://jigsaw.w3.org/css-validator/check/referer'>
             <img src='../multimedia/CSS3.png' alt='CSS Válido!' height='31' width='32'/></a>
     </footer>
 </body>

@@ -11,29 +11,29 @@ echo"<!DOCTYPE html>
 </head>
 <body>
     <nav class='navbar'>
-        <a href='../index.html'>Inicio</a>
-        <a href='../html/resenas.html'>Ver Reseñas</a>
-        <a href='../html/mapa.html'>Mapa</a>
-        <a href='../html/lugares.html'>Lugares</a>
-        <a href='../html/companias.html'>Compañías</a>
-        <a href='insertar.php' >Añadir Reseñas</a>
-        <a href='informe.php' >Informe</a>
+        <a href='../index.html'> Inicio </a>
+        <a href='../html/resenas.html'> Ver Reseñas </a>
+        <a href='../html/mapa.html'> Mapa </a>
+        <a href='../html/lugares.html'> Lugares </a>
+        <a href='../html/companias.html'> Compañías </a>
+        <a href='insertar.php' > Añadir Reseñas </a>
+        <a href='informe.php' > Informe </a>
     </nav>
     <section class='home'>
         <h1>Informe de World Review</h1>" . $bd->generarInforme() ."
         <h2>Cargar datos de un CSV</h2>
             <form action='#' method='post' name='db.php'>
                 <p><label for='archivo_usuarios'>Seleccionar el CSV de usuarios: <input type='file' accept='.csv' name='archivo_usuarios' id='archivo_usuarios'/></label>
-                <label for='importar_usuarios'><input type='submit' class='button' name='importar_usuarios' value='Importar' id='importar_usuarios'/></label></p>
+                <label for='importar_usuarios'>Importar: <input type='submit' class='button' name='importar_usuarios' value='Importar' id='importar_usuarios'/></label></p>
                 
                 <p><label for='archivo_lugares'>Seleccionar el CSV de lugares: <input type='file' accept='.csv' name='archivo_lugares' id='archivo_lugares'/></label>
-                <label for='importar_lugares'><input type='submit' class='button' name='importar_lugares' value='Importar' id='importar_lugares'/></label></p>
+                <label for='importar_lugares'>Importar: <input type='submit' class='button' name='importar_lugares' value='Importar' id='importar_lugares'/></label></p>
                 
                 <p><label for='archivo_resenas'>Seleccionar el CSV de reseñas: <input type='file' accept='.csv' name='archivo_resenas' id='archivo_resenas'/></label>
-                <label for='importar_resenas'><input type='submit' class='button' name='importar_resenas' value='Importar' id='importar_resenas'/></label></p>
+                <label for='importar_resenas'>Importar: <input type='submit' class='button' name='importar_resenas' value='Importar' id='importar_resenas'/></label></p>
 
                 <p><label for='archivo_viajes'>Seleccionar el CSV de viajes: <input type='file' accept='.csv' name='archivo_viajes' id='archivo_viajes'/></label>
-                <label for='importar_viajes'><input type='submit' class='button' name='importar_viajes' value='Importar' id='importar_viajes'/></label></p>
+                <label for='importar_viajes'>Importar: <input type='submit' class='button' name='importar_viajes' value='Importar' id='importar_viajes'/></label></p>
                 
                 </form>
     </section>	
