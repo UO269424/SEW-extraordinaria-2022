@@ -3,7 +3,6 @@ include 'db.php';
 echo"<!DOCTYPE html>
 <html lang='es'>
 <head>
-    <meta charset='utf-8'>
     <title>Informe</title>
     <link rel='stylesheet' href='../css/estilo.css'>
     <meta name = 'application_name' content = 'World Review'>
