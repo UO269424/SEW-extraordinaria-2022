@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<html lang="es"><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta charset="utf-8">
+<!-- saved from url=(0014)about:internet -->
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Informe</title>
-    <link rel="stylesheet" href="Informe_files/estilo.css">
+    <link rel="stylesheet" href="./Informe_files/estilo.css">
     <meta name="application_name" content="World Review">
     <meta name="author" content="Alonso Gago Suárez - UO269424">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,9 +18,9 @@
         <a href="http://localhost/Fuentes/php/informe.php">Informe</a>
     </nav>
     <section class="home">
-        <h1>Informe de World Review</h1><p><label for="lugarVisitado">Lugar más visitado: <input type="text" name="lugarVisitado" value="Oviedo" readonly="readonly"></label></p><p><label for="persona">Usuario más activo: <input type="text" name="persona" value="Alonso" readonly="readonly"></label></p><p><label for="lugarVotado">Lugar más votado: <input type="text" name="lugarVotado" value="Colunga - 9.0000" readonly="readonly"></label></p>
-        <h2>Cargar o exportar datos de un CSV</h2>
-            <form action="#" method="post" name="db.php">
+        <h1>Informe de World Review</h1><p><label for="lugarVisitado">Lugar más visitado: <input type="text" name="lugarVisitado" id="lugarVisitado" value="Camboya" readonly=""></label></p><p><label for="persona">Usuario más activo: <input type="text" name="persona" id="persona" value="Oswaldo" readonly=""></label></p><p><label for="lugarVotado">Lugar mejor valorado: <input type="text" name="lugarVotado" id="lugarVotado" value="Camboya" readonly=""></label></p>
+        <h2>Cargar datos de un CSV</h2>
+            <form action="http://localhost/Fuentes/php/informe.php#" method="post" name="db.php">
                 <p><label for="archivo_usuarios">Seleccionar el CSV de usuarios: <input type="file" accept=".csv" name="archivo_usuarios" id="archivo_usuarios"></label>
                 <label for="importar_usuarios"><input type="submit" class="button" name="importar_usuarios" value="Importar" id="importar_usuarios"></label></p>
                 
@@ -34,14 +33,13 @@
                 <p><label for="archivo_viajes">Seleccionar el CSV de viajes: <input type="file" accept=".csv" name="archivo_viajes" id="archivo_viajes"></label>
                 <label for="importar_viajes"><input type="submit" class="button" name="importar_viajes" value="Importar" id="importar_viajes"></label></p>
                 
-                <p><label for="exportar">Exportar el archivo CSV:<input type="submit" class="button" name="exportar" value="Exportar" id="exportar"></label></p>
-            </form>
+                </form>
     </section>	
     <footer>
         <a href="https://validator.w3.org/check?uri=referer">
-            <img src="Informe_files/HTML5.png" alt="HTML5 válido!" width="32" height="31"></a>
+            <img src="./Informe_files/HTML5.png" alt="HTML5 válido!" height="31" width="32"></a>
         <a href="http://jigsaw.w3.org/css-validator/check/referer">
-            <img src="Informe_files/CSS3.png" alt="CSS Válido!" width="32" height="31"></a>
+            <img src="./Informe_files/CSS3.png" alt="CSS Válido!" height="31" width="32"></a>
     </footer>
 
 </body></html>
