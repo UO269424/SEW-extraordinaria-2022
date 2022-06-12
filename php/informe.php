@@ -12,11 +12,17 @@ echo"<!DOCTYPE html>
 <body>
     <nav class='navbar'>
         <a href='../index.html'> Inicio </a>
+
         <a href='../html/resenas.html'> Ver Reseñas </a>
+
         <a href='../html/mapa.html'> Mapa </a>
+
         <a href='../html/lugares.html'> Lugares </a>
+
         <a href='../html/companias.html'> Compañías </a>
+
         <a href='insertar.php' > Añadir Reseñas </a>
+
         <a href='informe.php' > Informe </a>
     </nav>
     <section class='home'>
