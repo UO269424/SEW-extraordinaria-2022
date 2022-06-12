@@ -317,13 +317,12 @@
 
                     $result = $db->query("SELECT id_lugar, AVG(puntuacion) AS counter FROM resena GROUP BY id_lugar ORDER BY counter DESC");
                     $aux = $result->fetch_array()[0];
-                    $mayorPuntuacion = $result->fetch_array()[1];
                     $result = $db->query("SELECT nombre_lugar FROM lugar WHERE id_lugar = ". $aux);
                     $lugarMejorVotado = $result->fetch_array()[0];
 
                     $informe = "<p><label for='lugarVisitado'>Lugar más visitado: <input type='text' name='lugarVisitado' value='". $lugarMasVisitado ."' readonly/></label></p>".
                             "<p><label for='persona'>Usuario más activo: <input type='text' name='persona' value='". $usuarioMasViajero ."' readonly/></label></p>" . 
-                            "<p><label for='lugarVotado'>Lugar más votado: <input type='text' name='lugarVotado' value='". $lugarMejorVotado . " - " . $mayorPuntuacion ."' readonly/></label></p>";
+                            "<p><label for='lugarVotado'>Lugar mejor valorado: <input type='text' name='lugarVotado' value='". $lugarMejorVotado . "' readonly/></label></p>";
                     $this->closeBD($db);
                     return $informe;
                 }

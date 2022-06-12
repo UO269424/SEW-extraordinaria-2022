@@ -136,7 +136,8 @@ main {
 }
 
 /* a=1 b=0 c=0 -> Especificidad = 100 */
-main{
+section article{
     height:500%; 
     width:100%;
+    color: black;
 }

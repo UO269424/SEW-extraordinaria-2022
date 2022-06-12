@@ -22,7 +22,7 @@ echo"<!DOCTYPE html>
     </nav>
     <section class='home'>
         <h1>Informe de World Review</h1>" . $bd->generarInforme() ."
-        <h2>Cargar o exportar datos de un CSV</h2>
+        <h2>Cargar datos de un CSV</h2>
             <form action='#' method='post' name='db.php'>
                 <p><label for='archivo_usuarios'>Seleccionar el CSV de usuarios: <input type='file' accept='.csv' name='archivo_usuarios' id='archivo_usuarios'/></label>
                 <label for='importar_usuarios'><input type='submit' class='button' name='importar_usuarios' value='Importar' id='importar_usuarios'/></label></p>
@@ -36,8 +36,7 @@ echo"<!DOCTYPE html>
                 <p><label for='archivo_viajes'>Seleccionar el CSV de viajes: <input type='file' accept='.csv' name='archivo_viajes' id='archivo_viajes'/></label>
                 <label for='importar_viajes'><input type='submit' class='button' name='importar_viajes' value='Importar' id='importar_viajes'/></label></p>
                 
-                <p><label for='exportar'>Exportar el archivo CSV:<input type='submit' class='button' name='exportar' value='Exportar' id='exportar'/></label></p>
-            </form>
+                </form>
     </section>	
     <footer>
         <a href='https://validator.w3.org/check?uri=referer'>
