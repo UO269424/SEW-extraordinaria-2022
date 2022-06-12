@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Insertar</title>
+    <link rel="stylesheet" href="Insertar_files/estilo.css">
+    <meta name="application_name" content="World Review">
+    <meta name="author" content="Alonso Gago Suárez - UO269424">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <nav class="navbar">
+            <a href="http://localhost/Fuentes/index.html">Inicio</a>
+            <a href="http://localhost/Fuentes/html/resenas.html">Ver Reseñas</a>
+            <a href="http://localhost/Fuentes/html/mapa.html">Mapa</a>
+            <a href="http://localhost/Fuentes/html/lugares.html">Lugares</a>
+            <a href="http://localhost/Fuentes/html/companias.html">Compañías</a>
+            <a href="http://localhost/Fuentes/php/insertar.php">Añadir Reseñas</a>
+            <a href="http://localhost/Fuentes/php/informe.php">Informe</a>
+    </nav>
+    <section class="home">
+        <h1>Insertar datos en la Base de Datos</h1>
+        <form id="basedatos" action="#" method="post" name="db.php">
+            <h2>Insertar Reseñas</h2>
+            <p><label for="nombreUsuario">Nombre: <input type="text" name="nombreUsuario"></label></p>
+            <p><label for="apellidosUsuario">Apellidos: <input type="text" name="apellidosUsuario"></label></p>
+            <p><label for="nombreLugar">Lugar: <input type="text" name="nombreLugar"></label></p>
+            <p><label for="descripcion">Reseña: <input type="text" name="descripcion"></label></p>
+            <p><label for="puntuacion">Puntuación: <input type="number" min="1" max="10" step="1" value="10" name="puntuacion"></label></p>
+            <p><label for="agencia">Agencia:  <select name="agencia" title="agencia">
+                                                <option value="ninguna" selected="selected">Ninguna</option>
+                                                <option value="expedia">Expedia</option>
+                                                <option value="corte_ingles">Viajes el Corte Inglés</option>
+                                                <option value="ebooker">EBooker</option>
+                                                <option value="otra">Otra</option>
+                                            </select></label></p>
+
+            <p><label for="insertarDatos"><input type="submit" class="button" name="insertarDatos" value="Enviar datos" id="insertarDatos"></label></p>
+        </form>
+    </section>	
+    <footer>
+        <a href="https://validator.w3.org/check?uri=referer">
+            <img src="Insertar_files/HTML5.png" alt="HTML5 válido!" width="32" height="31"></a>
+        <a href="http://jigsaw.w3.org/css-validator/check/referer">
+            <img src="Insertar_files/CSS3.png" alt="CSS Válido!" width="32" height="31"></a>
+    </footer>
+
+</body></html>
