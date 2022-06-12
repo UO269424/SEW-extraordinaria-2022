@@ -137,6 +137,6 @@ main {
 
 /* a=1 b=0 c=0 -> Especificidad = 100 */
 main{
-    height:1000%; 
+    height:500%; 
     width:100%;
 }

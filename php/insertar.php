@@ -17,20 +17,27 @@ echo"<!DOCTYPE html>
             <a href='../html/mapa.html'>Mapa</a>
             <a href='../html/lugares.html'>Lugares</a>
             <a href='../html/companias.html'>Compañías</a>
-            <a href='./php/insertar.php' >Añadir Reseñas</a>
-            <a href='./php/informe.php' >Informe</a>
+            <a href='insertar.php' >Añadir Reseñas</a>
+            <a href='informe.php' >Informe</a>
     </nav>
     <section class='home'>
         <h1>Insertar datos en la Base de Datos</h1>
-        <form action='#' method='post' name='db.php'>
+        <form id='basedatos' action='#' method='post' name='db.php'>
             <h2>Insertar Reseñas</h2>
             <p><label for='nombreUsuario'>Nombre: <input type='text' name='nombreUsuario'/></label></p>
             <p><label for='apellidosUsuario'>Apellidos: <input type='text' name='apellidosUsuario'/></label></p>
             <p><label for='nombreLugar'>Lugar: <input type='text' name='nombreLugar'/></label></p>
-            <p><label for='reseña'>Reseña: <input type='text' name='reseña'/></label></p>
+            <p><label for='descripcion'>Reseña: <input type='text' name='descripcion'/></label></p>
             <p><label for='puntuacion'>Puntuación: <input type='number' min='1' max='10' step='1' value='10' name='puntuacion'/></label></p>
+            <p><label for='agencia'>Agencia:  <select name='agencia' title='agencia'>
+                                                <option value='ninguna'>Ninguna</option>
+                                                <option value='expedia'>Expedia</option>
+                                                <option value='corte_ingles'>Viajes el Corte Inglés</option>
+                                                <option value='ebooker'>EBooker</option>
+                                                <option value='otra'>Otra</option>
+                                            </select></p>
 
-            <p><label for='crearReseña'><input type='submit' class='button' name='crearReseña' value='Enviar reseña' id='crearReseña'/></label></p>
+            <p><label for='insertarDatos'><input type='submit' class='button' name='insertarDatos' value='Enviar datos' id='insertarDatos'/></label></p>
         </form>
     </section>	
     <footer>

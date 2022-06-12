@@ -11,25 +11,31 @@ echo"<!DOCTYPE html>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
 </head>
 <body>
-<header>
     <nav class='navbar'>
-        <ul class='nav-ul'>
-            <li class='navlink'><a href='../index.html' class='navbar-enlace'>Inicio</a></li>
-            <li class='navlink'><a href='../html/resenas.html' class='navbar-enlace'>Ver Reseñas</a></li>
-            <li class='navlink'><a href='../html/mapa.html' class='navbar-enlace'>Mapa</a></li>
-            <li class='navlink'><a href='../html/lugares.html' class='navbar-enlace'>Lugares</a></li>
-            <li class='navlink'><a href='../html/companias.html' class='navbar-enlace'>Compañías</a></li>
-            <li class='navlink'><a href='insertar.php' class='navbar-enlace'>Añadir Reseñas</a></li>
-            <li class='navlink'><a href='informe.php' class='navbar-enlace'>Informe</a></li>
-        </ul>
+        <a href='../index.html'>Inicio</a>
+        <a href='../html/resenas.html'>Ver Reseñas</a>
+        <a href='../html/mapa.html'>Mapa</a>
+        <a href='../html/lugares.html'>Lugares</a>
+        <a href='../html/companias.html'>Compañías</a>
+        <a href='insertar.php' >Añadir Reseñas</a>
+        <a href='informe.php' >Informe</a>
     </nav>
-    </header>
     <section class='home'>
-        <h1>Informe de World Review</h1>".$baseDatos->generarInforme()."
+        <h1>Informe de World Review</h1>" . $bd->generarInforme() ."
         <h2>Cargar o exportar datos de un CSV</h2>
             <form action='#' method='post' name='db.php'>
-                <p><label for='archivo'>Seleccionar el CSV: <input type='file' accept='.csv' name='archivo' id='archivo'/></label>
-                <label for='importar'><input type='submit' class='button' name='importar' value='Importar' id='importar'/></label></p>
+                <p><label for='archivo_usuarios'>Seleccionar el CSV de usuarios: <input type='file' accept='.csv' name='archivo_usuarios' id='archivo_usuarios'/></label>
+                <label for='importar_usuarios'><input type='submit' class='button' name='importar_usuarios' value='Importar' id='importar_usuarios'/></label></p>
+                
+                <p><label for='archivo_lugares'>Seleccionar el CSV de lugares: <input type='file' accept='.csv' name='archivo_lugares' id='archivo_lugares'/></label>
+                <label for='importar_lugares'><input type='submit' class='button' name='importar_lugares' value='Importar' id='importar_lugares'/></label></p>
+                
+                <p><label for='archivo_resenas'>Seleccionar el CSV de reseñas: <input type='file' accept='.csv' name='archivo_resenas' id='archivo_resenas'/></label>
+                <label for='importar_resenas'><input type='submit' class='button' name='importar_resenas' value='Importar' id='importar_resenas'/></label></p>
+
+                <p><label for='archivo_viajes'>Seleccionar el CSV de viajes: <input type='file' accept='.csv' name='archivo_viajes' id='archivo_viajes'/></label>
+                <label for='importar_viajes'><input type='submit' class='button' name='importar_viajes' value='Importar' id='importar_viajes'/></label></p>
+                
                 <p><label for='exportar'>Exportar el archivo CSV:<input type='submit' class='button' name='exportar' value='Exportar' id='exportar'/></label></p>
             </form>
     </section>	
